@@ -6,6 +6,43 @@ body {
     min-height: 100vh;
 }
 
+/*Personalización de la navbar estandar*/
+/*IMPORTANTE: Su navar debe tener este mismo nommbre para que funcionen los estilos*/
+.my-custom-navbar{
+    background-color: #1A1A2E;
+}
+
+/* 1. Color del nombre de la marca (Rosario Sport) */
+.my-custom-navbar .navbar-brand {
+    color: #ffffff !important; /* Cambia el color aquí */
+    font-weight: bold;
+}
+
+/* 2. Color de los enlaces del menú (Inicio, Categorías, Contacto) */
+.my-custom-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important; /* Blanco con un poco de transparencia */
+}
+
+/* 3. Color de los enlaces cuando pasas el mouse (Hover) */
+.my-custom-navbar .nav-link:hover {
+    color: #ffc107 !important; /* Color dorado al pasar el mouse */
+}
+
+/* 4. Color del enlace de la página donde estás (Active) */
+.my-custom-navbar .nav-link.active {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+/* 5. El botón de menú móvil (el icono de las tres rayitas) */
+/* Si tu fondo es oscuro, esta clase de Bootstrap ayuda a que se vea blanco */
+.my-custom-navbar .navbar-toggler {
+    border-color: rgba(255,255,255,0.5);
+}
+.my-custom-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://w3.org foreigners%3Cpath stroke='rgba(255,255,255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
 /* Carrusel */
 .d-item {
     height: 600px;
@@ -285,17 +322,17 @@ footer {
     }
     }
 
-    @media (max-width: 560px) {
+@media (max-width: 560px) {
     .footer-grid {
         grid-template-columns: 1fr;
     }
 
-    .footer-bottom {
+.footer-bottom {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .footer-legal {
+.footer-legal {
         flex-wrap: wrap;
         gap: 12px;
     }
