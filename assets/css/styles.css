@@ -5,7 +5,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     /* Ajusta los 70px según el alto de la navbar */
-    padding-top: 70px;
     background-color: #F4F7FB;
     color: #12121F;
 }
@@ -49,6 +48,7 @@ body {
 
 /*Personalizacion del formulario*/
 form{
+    padding-top: 70px;
     background-color: white;
     padding: 2rem;
     border-radius: 12px;
