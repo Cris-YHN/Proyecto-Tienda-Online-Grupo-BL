@@ -154,7 +154,6 @@ form{
 
 
 /********************** ── FOOTER ── **********************/
-/* ── FOOTER ── */
 footer {
     background: #1A1A2E;
     color: #ffffff;
@@ -205,6 +204,7 @@ footer {
     max-width: 300px;
     }
 
+
 /* Newsletter */
 .newsletter-label {
     font-size: 11px;
@@ -217,8 +217,14 @@ footer {
 
     .newsletter-form {
     display: flex;
-    gap: 0;
-    max-width: 300px;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #242442 !important;
+    color: white !important;
+    padding: 10px;
+    border-radius: 8px;
     }
 
     .newsletter-form input {
@@ -226,16 +232,17 @@ footer {
     background: #1E2A45;
     border: 1px solid #2a3a5c;
     border-right: none;
-    color: #ffffff;
+    color: #ffffff !important;
     font-family: sans-serif;
     font-size: 13px;
     padding: 10px 14px;
     border-radius: 4px 0 0 4px;
     outline: none;
     transition: border-color 0.2s;
+    min-width: 200px;
     }
 
-.newsletter-form input::placeholder { color: #5a5650; }
+.newsletter-form input::placeholder { color:  #8888AA; }
 .newsletter-form input:focus { border-color: #F8F8FB; }
 
 .newsletter-form button {
@@ -254,7 +261,7 @@ footer {
     white-space: nowrap;
     }
 
-.newsletter-form button:hover { background: #F8F8FB; }
+.newsletter-form button:hover { background: #FF8C00; }
 
 /* Column headings */
 .footer-col h4 {
