@@ -433,3 +433,11 @@ footer {
         gap: 12px;
     }
     }
+
+
+/*Colores pora el estilo de los errores*/
+small{
+    color: #ff4d4d;
+    display: block;
+    margin-top: 5px;
+}    
