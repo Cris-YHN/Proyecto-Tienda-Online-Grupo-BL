@@ -98,9 +98,16 @@ El sitio utiliza una identidad visual oscura y elegante:
 
 Esta combinación genera contraste alto y una estética deportiva premium.
 
-### Decisión: navbar fija (`fixed-top`)
+### Decisión: navbar fija vs. sticky por página
 
-La navbar usa `fixed-top` de Bootstrap para permanecer visible mientras el usuario hace scroll. Para evitar que el contenido quede oculto detrás de la navbar (que mide 56px), se aplica un `margin-top: 56px` al carrusel directamente en el HTML.
+Las páginas del proyecto usan distintos comportamientos de navbar:
+
+| Página | Clase Bootstrap | Comportamiento |
+|---|---|---|
+| `index.html` | `fixed-top` | Flota sobre el contenido. Requiere `margin-top: 56px` manual en el carrusel para que el contenido no quede tapado. |
+| `contacto.html` | `sticky-top` | Empuja el contenido hacia abajo al hacer scroll. No requiere compensación de margen. |
+
+> **Recomendación**: unificar a `sticky-top` en todas las páginas para evitar el parche del `margin-top` y simplificar el CSS.
 
 ### Decisión: Footer dentro del carrusel en el HTML
 
@@ -137,7 +144,33 @@ El footer se ubica como hermano del carrusel dentro del mismo contenedor `<div>`
 
 ### `contacto.html` — Formulario de Contacto
 
-Página con formulario para que los usuarios envíen consultas. Utiliza Bootstrap para el layout y `styles.css` para la presentación del formulario con sombra y border-radius.
+Página con formulario para que los usuarios envíen consultas. Utiliza el sistema de grilla y componentes de Bootstrap, junto con `styles.css` para los estilos de la tarjeta del formulario.
+
+**Estructura de la página:**
+
+1. **Encabezado** — Título `<h1>` y subtítulo `<h3>` fuera del contenedor, sin estilos personalizados (pendiente de mejorar).
+2. **Formulario** — Centrado con `container > row > col-md-8 col-lg-6`, dentro de una `card` de Bootstrap con sombra (`shadow`) y padding (`p-4`). Campos:
+   - **Nombre**: `input type="text"` con `id="nombre"`.
+   - **Email**: `input type="email"` con `id="email"`.
+   - **Mensaje**: `textarea` de 5 filas con `id="mensaje"`.
+   - **Botón Enviar**: `btn btn-dark`, ancho completo con `d-grid`.
+3. **Footer** — Idéntico al de `index.html`.
+
+**Diferencias importantes respecto a `index.html`:**
+
+| Aspecto | `index.html` | `contacto.html` |
+|---|---|---|
+| Comportamiento navbar | `fixed-top` (flota sobre el contenido) | `sticky-top` (empuja el contenido hacia abajo) |
+| Font Awesome | ✅ Incluido | ❌ No incluido (los íconos del footer no se verán) |
+| Link activo en navbar | "Inicio" marcado como active | "Inicio" marcado como active (debería ser "Contacto") |
+| Tagline del footer | "Tienda Deportiva" | "Tu slogan aquí" (placeholder sin actualizar) |
+| Descripción del footer | Texto real de la tienda | Texto genérico de placeholder |
+
+> **⚠️ Bugs detectados en `contacto.html`:**
+> 1. **Falta Font Awesome** en el `<head>`. Los íconos del footer (ubicación, teléfono, email, reloj y redes sociales) no se renderizan. Solución: agregar `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">`.
+> 2. **Link activo incorrecto**: el `aria-current="page"` está en "Inicio" en lugar de "Contacto". Cambiar `active` al `<li>` de Contacto.
+> 3. **Contenido del footer desactualizado**: el tagline dice "Tu slogan aquí" y la descripción es texto de plantilla. Debe sincronizarse con el footer de `index.html`.
+> 4. **El formulario no tiene validación ni acción**: el `<form>` no tiene `action` ni validación JS. Actualmente no envía datos a ningún lado.
 
 ### `categorias.html` — Categorías
 
@@ -222,13 +255,17 @@ La navbar usa el breakpoint `navbar-expand-lg` de Bootstrap, que colapsa en hamb
 ## Componentes Reutilizables
 
 ### Navbar
-Para reutilizar la navbar en `categorias.html` y `contacto.html`, copiar el bloque `<nav>` completo de `index.html`. Asegurarse de:
+La navbar se repite en `index.html` y `contacto.html`. Al copiarla a nuevas páginas, verificar siempre:
 1. Mantener la clase `.my-custom-navbar`.
-2. Marcar como `active` el link de la página actual.
-3. Incluir los scripts de Bootstrap al final del `<body>`.
+2. Marcar como `active` el link de **la página actual** (no dejarlo siempre en "Inicio").
+3. Decidir entre `fixed-top` (requiere `margin-top` de compensación) o `sticky-top` (recomendado).
+4. Incluir los scripts de Bootstrap al final del `<body>`.
 
 ### Footer
-El footer también es reutilizable. Se recomienda en futuras refactorizaciones extraerlo a un archivo separado e incluirlo con un `fetch()` o template HTML para evitar duplicación de código.
+El footer se repite en todas las páginas. Actualmente en `contacto.html` tiene contenido de placeholder sin actualizar ("Tu slogan aquí"). Al copiar el footer a nuevas páginas:
+1. Copiar siempre desde `index.html`, que tiene el contenido correcto.
+2. Incluir Font Awesome en el `<head>` o los íconos no se mostrarán.
+3. Se recomienda en futuras versiones extraerlo a un archivo separado e incluirlo con `fetch()` o un bundler para evitar duplicación.
 
 ---
 
@@ -258,12 +295,23 @@ No requiere instalación. Simplemente abrir `index.html` en el navegador, o usar
 
 ### Mejoras sugeridas
 
-- [ ] Extraer navbar y footer a componentes incluibles (o usar un framework como Astro/Vue).
-- [ ] Implementar la lógica de `main.js` para el formulario de newsletter.
-- [ ] Completar la página `categorias.html` con tarjetas de productos.
-- [ ] Agregar meta tags de SEO (description, og:image, etc.).
+**Bugs a corregir primero:**
+- [ ] Agregar Font Awesome en el `<head>` de `contacto.html` (íconos del footer rotos).
+- [ ] Corregir el link `active` en la navbar de `contacto.html` (debe ser "Contacto", no "Inicio").
+- [ ] Actualizar el footer de `contacto.html`: reemplazar "Tu slogan aquí" y el texto de placeholder.
+- [ ] Agregar `action` al formulario de contacto o conectarlo a un servicio (ej: [Formspree](https://formspree.io)).
 - [ ] Cambiar `lang="en"` a `lang="es"` en todos los archivos HTML.
-- [ ] Conectar el formulario de contacto a un backend o servicio como Formspree.
+
+**Mejoras de funcionalidad:**
+- [ ] Implementar validación JS del formulario de contacto en `main.js`.
+- [ ] Implementar validación del formulario de newsletter.
+- [ ] Completar la página `categorias.html` con tarjetas de productos.
+- [ ] Agregar meta tags de SEO (`description`, `og:image`, `og:title`).
+
+**Mejoras de arquitectura:**
+- [ ] Unificar el comportamiento de la navbar a `sticky-top` en todas las páginas.
+- [ ] Extraer navbar y footer a componentes incluibles para evitar duplicación de código.
+- [ ] Considerar un framework liviano como Astro para manejar layouts compartidos.
 
 ---
 
