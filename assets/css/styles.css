@@ -43,7 +43,7 @@ body {
     border-color: rgba(255,255,255,0.5);
 }
 .my-custom-navbar .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://w3.org foreigners%3Cpath stroke='rgba(255,255,255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 /*Personalizacion del formulario*/
@@ -59,7 +59,7 @@ form{
 /* Carrusel */
 .d-img {
     width: 100%;
-    height: auto;        /* Muestra la imagen completa sin recortar */
+    height: auto;        
     display: block;
     filter: brightness(0.6);
 }
@@ -218,7 +218,7 @@ footer {
     .newsletter-form {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0px;
     width: 100%;
     max-width: 400px;
     background-color: #242442 !important;
