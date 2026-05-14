@@ -12,7 +12,7 @@
 
 <body>
 
-    <!-- ── Barra de Navegación ── -->
+    <!--  Barra de Navegación  -->
     <nav class="navbar navbar-expand-lg fixed-top my-custom-navbar">
         <div class="container-fluid">
 
@@ -43,47 +43,62 @@
         </div>
     </nav>
 
-    <!-- ── Contenido Principal ── -->
+    <!--  Contenido Principal  -->
     <main class="container" style="margin-top: 110px; margin-bottom: 80px;">
 
         <h1 class="text-center text-warning mb-5">Categorías deportivas</h1>
 
-        <!-- ── Fútbol ── -->
+        <!-- SECCIÓN: FÚTBOL -->
         <section class="mb-5">
 
             <h2 class="text-warning mb-4">Fútbol</h2>
 
             <div class="row g-4">
 
+                <!-- Botines Nike -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 bg-dark text-light border-warning shadow">
-                        <img src="assets/img/Carrusel/1.png" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Botines de fútbol">
+                        <img src="assets/img/productos/botinesnike.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Botines de fútbol">
                         <div class="card-body">
                             <h5 class="card-title">Botines Nike</h5>
                             <p class="card-text text-light">Botines profesionales para césped natural.</p>
-                            <button class="btn btn-warning w-100">Ver detalle</button>
+                            <button class="btn btn-warning w-100"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalBotinesNike">
+                                Ver detalle
+                            </button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Pelota Adidas -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 bg-dark text-light border-warning shadow">
-                        <img src="assets/img/Carrusel/2.png" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Pelota de fútbol">
+                        <img src="assets/img/productos/pelotaadidas.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Pelota de fútbol">
                         <div class="card-body">
                             <h5 class="card-title">Pelota Adidas</h5>
                             <p class="card-text text-light">Pelota oficial profesional.</p>
-                            <button class="btn btn-warning w-100">Ver detalle</button>
+                            <button class="btn btn-warning w-100"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalPelotaAdidas">
+                                Ver detalle
+                            </button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Camiseta Puma -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 bg-dark text-light border-warning shadow">
-                        <img src="assets/img/Carrusel/3.png" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Camiseta de fútbol">
+                        <img src="assets/img/productos/camisetapuma.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Camiseta de fútbol">
                         <div class="card-body">
                             <h5 class="card-title">Camiseta Puma</h5>
                             <p class="card-text text-light">Camiseta deportiva profesional.</p>
-                            <button class="btn btn-warning w-100">Ver detalle</button>
+                            <button class="btn btn-warning w-100"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalCamisetaPuma">
+                                Ver detalle
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -92,42 +107,57 @@
 
         </section>
 
-        <!-- ── Básquet ── -->
+        <!-- SECCIÓN: BÁSQUET -->
         <section class="mb-5">
 
             <h2 class="text-warning mb-4">Básquet</h2>
 
             <div class="row g-4">
 
+                <!-- Zapatillas Jordan -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 bg-dark text-light border-warning shadow">
                         <img src="assets/img/productos/zapatillasJordan.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Zapatillas Jordan">
                         <div class="card-body">
                             <h5 class="card-title">Zapatillas Jordan</h5>
                             <p class="card-text text-light">Zapatillas profesionales de básquet.</p>
-                            <button class="btn btn-warning w-100">Ver detalle</button>
+                            <button class="btn btn-warning w-100"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalZapatillasJordan">
+                                Ver detalle
+                            </button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Pelota NBA -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 bg-dark text-light border-warning shadow">
                         <img src="assets/img/productos/pelotabasquet.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Pelota de básquet">
                         <div class="card-body">
                             <h5 class="card-title">Pelota NBA</h5>
                             <p class="card-text text-light">Pelota profesional indoor.</p>
-                            <button class="btn btn-warning w-100">Ver detalle</button>
+                            <button class="btn btn-warning w-100"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalPelotaNBA">
+                                Ver detalle
+                            </button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Musculosa Lakers -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 bg-dark text-light border-warning shadow">
                         <img src="assets/img/productos/musculosaLakers.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Musculosa Lakers">
                         <div class="card-body">
                             <h5 class="card-title">Musculosa Lakers</h5>
                             <p class="card-text text-light">Musculosa transpirable deportiva.</p>
-                            <button class="btn btn-warning w-100">Ver detalle</button>
+                            <button class="btn btn-warning w-100"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalMusculosaLakers">
+                                Ver detalle
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -136,42 +166,57 @@
 
         </section>
 
-        <!-- ── Natación ── -->
+        <!-- SECCIÓN: NATACIÓN -->
         <section class="mb-5">
 
             <h2 class="text-warning mb-4">Natación</h2>
 
             <div class="row g-4">
 
+                <!-- Malla Speedo -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 bg-dark text-light border-warning shadow">
                         <img src="assets/img/productos/speedmalla.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Malla de natación">
                         <div class="card-body">
                             <h5 class="card-title">Malla Speedo</h5>
                             <p class="card-text text-light">Malla profesional resistente al cloro.</p>
-                            <button class="btn btn-warning w-100">Ver detalle</button>
+                            <button class="btn btn-warning w-100"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalMallaSpeedo">
+                                Ver detalle
+                            </button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Gorro Arena -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 bg-dark text-light border-warning shadow">
                         <img src="assets/img/productos/gorronatacion.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Gorro de natación">
                         <div class="card-body">
                             <h5 class="card-title">Gorro Arena</h5>
                             <p class="card-text text-light">Gorro siliconado profesional.</p>
-                            <button class="btn btn-warning w-100">Ver detalle</button>
+                            <button class="btn btn-warning w-100"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalGorroArena">
+                                Ver detalle
+                            </button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Antiparras Speedo -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 bg-dark text-light border-warning shadow">
                         <img src="assets/img/productos/antiparrasspeddo.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Antiparras Speedo">
                         <div class="card-body">
                             <h5 class="card-title">Antiparras Speedo</h5>
                             <p class="card-text text-light">Antiparras antiempañantes.</p>
-                            <button class="btn btn-warning w-100">Ver detalle</button>
+                            <button class="btn btn-warning w-100"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalAntiparrasSpeedo">
+                                Ver detalle
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -182,91 +227,325 @@
 
     </main>
 
-    <!-- ── Footer ── -->
+
+    <!-- MODALES  FÚTBOL -->
+
+    <!-- Modal de Botines Nike -->
+    <div class="modal fade" id="modalBotinesNike" tabindex="-1" aria-labelledby="labelBotinesNike" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-warning">
+                <div class="modal-header border-warning">
+                    <h5 class="modal-title text-warning" id="labelBotinesNike">Botines Nike</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/productos/botinesnike.jpg" class="img-fluid rounded mb-3" alt="Botines Nike">
+                    <p>Botines profesionales para césped natural. Suela de tacos intercambiables, material de cuero sintético de alta durabilidad.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Talla: 38 al 46</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Superficie: Césped natural</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Marca: Nike</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-warning">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Pelota Adidas -->
+    <div class="modal fade" id="modalPelotaAdidas" tabindex="-1" aria-labelledby="labelPelotaAdidas" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-warning">
+                <div class="modal-header border-warning">
+                    <h5 class="modal-title text-warning" id="labelPelotaAdidas">Pelota Adidas</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/productos/pelotaadidas.jpg" class="img-fluid rounded mb-3" alt="Pelota Adidas">
+                    <p>Pelota oficial profesional con tecnología de vuelo estable y cobertura termofusionada para mayor precisión en el juego.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Tamaño: N°5 oficial</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Material: Poliuretano termofusionado</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Marca: Adidas</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-warning">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Camiseta Puma -->
+    <div class="modal fade" id="modalCamisetaPuma" tabindex="-1" aria-labelledby="labelCamisetaPuma" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-warning">
+                <div class="modal-header border-warning">
+                    <h5 class="modal-title text-warning" id="labelCamisetaPuma">Camiseta Puma</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/productos/camisetapuma.jpg" class="img-fluid rounded mb-3" alt="Camiseta Puma">
+                    <p>Camiseta deportiva profesional con tecnología dryCELL para mantener el cuerpo seco y cómodo durante el partido.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Talles: XS al XXL</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Tecnología: dryCELL</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Marca: Puma</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-warning">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MODALES  BÁSQUET -->
+
+    <!-- Modal de Zapatillas Jordan -->
+    <div class="modal fade" id="modalZapatillasJordan" tabindex="-1" aria-labelledby="labelZapatillasJordan" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-warning">
+                <div class="modal-header border-warning">
+                    <h5 class="modal-title text-warning" id="labelZapatillasJordan">Zapatillas Jordan</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/productos/zapatillasJordan.jpg" class="img-fluid rounded mb-3" alt="Zapatillas Jordan">
+                    <p>Zapatillas profesionales de básquet con amortiguación Air y suela de goma de alta tracción para canchas indoor.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Talla: 38 al 48</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Amortiguación: Air cushion</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Marca: Jordan / Nike</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-warning">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Pelota NBA -->
+    <div class="modal fade" id="modalPelotaNBA" tabindex="-1" aria-labelledby="labelPelotaNBA" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-warning">
+                <div class="modal-header border-warning">
+                    <h5 class="modal-title text-warning" id="labelPelotaNBA">Pelota NBA</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/productos/pelotabasquet.jpg" class="img-fluid rounded mb-3" alt="Pelota NBA">
+                    <p>Pelota profesional indoor con cuero compuesto de alta calidad, diseñada para canchas de parqué con agarre superior.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Tamaño: N°7 oficial</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Superficie: Indoor (parqué)</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Material: Cuero compuesto</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-warning">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Musculosa Lakers -->
+    <div class="modal fade" id="modalMusculosaLakers" tabindex="-1" aria-labelledby="labelMusculosaLakers" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-warning">
+                <div class="modal-header border-warning">
+                    <h5 class="modal-title text-warning" id="labelMusculosaLakers">Musculosa Lakers</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/productos/musculosaLakers.jpg" class="img-fluid rounded mb-3" alt="Musculosa Lakers">
+                    <p>Musculosa transpirable deportiva oficial de los Lakers con tecnología Dri-FIT para máxima comodidad en cancha.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Talles: S al XXXL</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Tecnología: Dri-FIT</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Equipo: Los Angeles Lakers</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-warning">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MODALES  NATACIÓN -->
+
+    <!-- Modal de Malla Speedo -->
+    <div class="modal fade" id="modalMallaSpeedo" tabindex="-1" aria-labelledby="labelMallaSpeedo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-warning">
+                <div class="modal-header border-warning">
+                    <h5 class="modal-title text-warning" id="labelMallaSpeedo">Malla Speedo</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/productos/speedmalla.jpg" class="img-fluid rounded mb-3" alt="Malla Speedo">
+                    <p>Malla profesional resistente al cloro fabricada con tejido Endurance+ que mantiene su forma y color con el uso prolongado.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Talles: XS al XL</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Material: Endurance+ (resistente al cloro)</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Marca: Speedo</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-warning">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Gorro Arena -->
+    <div class="modal fade" id="modalGorroArena" tabindex="-1" aria-labelledby="labelGorroArena" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-warning">
+                <div class="modal-header border-warning">
+                    <h5 class="modal-title text-warning" id="labelGorroArena">Gorro Arena</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/productos/gorronatacion.jpg" class="img-fluid rounded mb-3" alt="Gorro Arena">
+                    <p>Gorro siliconado profesional de ajuste anatómico que reduce la resistencia al agua y protege el cabello del cloro.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Material: Silicona premium</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Talla: Única (elástico)</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Marca: Arena</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-warning">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Antiparras Speedo -->
+    <div class="modal fade" id="modalAntiparrasSpeedo" tabindex="-1" aria-labelledby="labelAntiparrasSpeedo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-warning">
+                <div class="modal-header border-warning">
+                    <h5 class="modal-title text-warning" id="labelAntiparrasSpeedo">Antiparras Speedo</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/img/productos/antiparrasspeddo.jpg" class="img-fluid rounded mb-3" alt="Antiparras Speedo">
+                    <p>Antiparras antiempañantes con lente UV400 y sello de silicona de doble aro para mayor estanqueidad y comodidad.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Lente: UV400 antiempañante</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Sello: Silicona doble aro</li>
+                        <li><i class="fa-solid fa-check text-warning me-2"></i>Marca: Speedo</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-warning">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  Footer  -->
     <footer>
-            <div class="footer-inner">
+        <div class="footer-inner">
             <div class="footer-grid">
-                <!-- ── Footer ── -->
-                <!-- ── Columna 1: Marca + newsletter ── -->
+                <!--  Columna 1: Marca + newsletter  -->
                 <div class="footer-brand">
-                <span class="brand-name">Rosario Sport</span>
-                <span class="brand-tagline">Tienda Deportiva</span>
-                <p class="brand-desc">
-                    La tienda preferida de Mr.Champions
-                </p>
-        
-                <span class="newsletter-label">Suscribite a novedades</span>
-                <form class="newsletter-form" onsubmit="return false;">
-                    <input type="email" placeholder="tu@email.com" aria-label="Email para newsletter" />
-                    <button type="submit">Suscribir</button>
-                </form>
+                    <span class="brand-name">Rosario Sport</span>
+                    <span class="brand-tagline">Tienda Deportiva</span>
+                    <p class="brand-desc">
+                        La tienda preferida de Mr.Champions
+                    </p>
+
+                    <span class="newsletter-label">Suscribite a novedades</span>
+                    <form class="newsletter-form" onsubmit="return false;">
+                        <input type="email" placeholder="tu@email.com" aria-label="Email para newsletter" />
+                        <button type="submit">Suscribir</button>
+                    </form>
                 </div>
-        
-                <!-- ── Columna 2: Tienda ── -->
+
+                <!--  Columna 2: Tienda  -->
                 <div class="footer-col">
-                <h4>Tienda</h4>
-                <ul>
-                    <li><a href="#">Todos los productos</a></li>
-                    <li><a href="#">Novedades</a></li>
-                    <li><a href="#">Ofertas</a></li>
-                </ul>
+                    <h4>Tienda</h4>
+                    <ul>
+                        <li><a href="#">Todos los productos</a></li>
+                        <li><a href="#">Novedades</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                    </ul>
                 </div>
-        
-                <!-- ── Columna 3: Ayuda ── -->
+
+                <!--  Columna 3: Ayuda  -->
                 <div class="footer-col">
-                <h4>Ayuda</h4>
-                <ul>
-                    <li><a href="#">Cómo comprar</a></li>
-                    <li><a href="#">Envíos y entregas</a></li>
-                    <li><a href="#">Cambios y devoluciones</a></li>
-                    <li><a href="#">Preguntas frecuentes</a></li>
-                    <li><a href="#">Mi cuenta</a></li>
-                    <li><a href="#">Seguir mi pedido</a></li>
-                </ul>
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Cómo comprar</a></li>
+                        <li><a href="#">Envíos y entregas</a></li>
+                        <li><a href="#">Cambios y devoluciones</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Mi cuenta</a></li>
+                        <li><a href="#">Seguir mi pedido</a></li>
+                    </ul>
                 </div>
-        
-                <!-- ── Columna 4: Contacto + redes ── -->
+
+                <!--  Columna 4: Contacto + redes  -->
                 <div class="footer-col">
-                <h4>Contacto</h4>
-        
-                <div class="contact-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>España 399, Rosario, Santa Fe</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>+54 9 341 256-1684</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>RosarioSport@tienda.com</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-clock"></i>
-                    <span>Lun–Vie: 10:00 a 20:00 hs</span>
-                </div>
-        
-                <div class="social-section">
-                    <span class="social-label">Seguinos</span>
-                    <div class="social-links">
-                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <h4>Contacto</h4>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>España 399, Rosario, Santa Fe</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+54 9 341 256-1684</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>RosarioSport@tienda.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Lun–Vie: 10:00 a 20:00 hs</span>
+                    </div>
+
+                    <div class="social-section">
+                        <span class="social-label">Seguinos</span>
+                        <div class="social-links">
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
                     </div>
                 </div>
-                </div>
-        
+
             </div>
-            </div>
-        
-            <!-- ── Barra inferior ── -->
-            <div class="footer-bottom">
+        </div>
+
+        <!--  Barra inferior  -->
+        <div class="footer-bottom">
             <p class="footer-copyright">
                 &copy; 2025 <strong>Rosario Sport</strong>. Todos los derechos reservados.
             </p>
-        
+
             <div class="footer-payments">
                 <span>Pagá con</span>
                 <span class="pay-badge">Visa</span>
@@ -274,15 +553,15 @@
                 <span class="pay-badge">Mercado Pago</span>
                 <span class="pay-badge">Transferencia</span>
             </div>
-        
+
             <nav class="footer-legal" aria-label="Links legales">
                 <a href="#">Términos y condiciones</a>
                 <a href="#">Política de privacidad</a>
                 <a href="#">Cookies</a>
             </nav>
-            </div>
-        
-        </footer>
+        </div>
+
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
