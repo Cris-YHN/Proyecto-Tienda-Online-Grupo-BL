@@ -4,169 +4,199 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rosario Sport</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <!--  Barra de Navegación  -->
-    <nav class="navbar navbar-expand-lg fixed-top my-custom-navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Rosario Sport</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!--    NAVBAR  -->
+    <nav class="navbar navbar-expand-lg navbar-rs">
+        <div class="container">
+            <a class="navbar-brand" href="#">ROSARIO<span>SPORT</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="categorias.html">Categorias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="categorias.html">Categorías</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                 </ul>
+                <button class="btn-cart ms-lg-3">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge-count">0</span>
+                </button>
             </div>
         </div>
     </nav>
     <!--  Carrusel de Imagenes  -->
-    <div id="carouselExampleCaptions" class="carousel slide" style="margin-top: 56px;">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active d-item">
-                <img src="assets/img/Carrusel/1.png" class="d-block w-100 d-img" alt="Slider 1">
-                <div class="carousel-caption">
-                    <button class="btn btn-outline-warning px-4 py-2 fs-5">Comprar</button>
+    <section class="hero-carousel-wrap">
+        <div class="container">
+            <div id="heroCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-            </div>
-            <div class="carousel-item d-item">
-                <img src="assets/img/Carrusel/2.png" class="d-block w-100 d-img" alt="Slider 2">
-                <div class="carousel-caption">
-                    <button class="btn btn-outline-warning px-4 py-2 fs-5">Comprar</button>
-                </div>
-            </div>
-            <div class="carousel-item d-item">
-                <img src="assets/img/Carrusel/3.png" class="d-block w-100 d-img" alt="Slider 3">
-                <div class="carousel-caption">
-                    <button class="btn btn-outline-warning px-4 py-2 fs-5">Comprar</button>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-        </div>
-        <footer>
-            <div class="footer-inner">
-            <div class="footer-grid">
-                <!--  Footer  -->
-                <!--  Columna 1: Marca + newsletter  -->
-                <div class="footer-brand">
-                <span class="brand-name">Rosario Sport</span>
-                <span class="brand-tagline">Tienda Deportiva</span>
-                <p class="brand-desc">
-                    La tienda preferida de Mr.Champions
-                </p>
-        
-                <span class="newsletter-label">Suscribite a novedades</span>
-                <form class="newsletter-form" onsubmit="return false;">
-                    <input type="email" placeholder="tu@email.com" aria-label="Email para newsletter" />
-                    <button type="submit">Suscribir</button>
-                </form>
-                </div>
-        
-                <!--  Columna 2: Tienda  -->
-                <div class="footer-col">
-                <h4>Tienda</h4>
-                <ul>
-                    <li><a href="#">Todos los productos</a></li>
-                    <li><a href="#">Novedades</a></li>
-                    <li><a href="#">Ofertas</a></li>
-                </ul>
-                </div>
-        
-                <!--  Columna 3: Ayuda  -->
-                <div class="footer-col">
-                <h4>Ayuda</h4>
-                <ul>
-                    <li><a href="#">Cómo comprar</a></li>
-                    <li><a href="#">Envíos y entregas</a></li>
-                    <li><a href="#">Cambios y devoluciones</a></li>
-                    <li><a href="#">Preguntas frecuentes</a></li>
-                    <li><a href="#">Mi cuenta</a></li>
-                    <li><a href="#">Seguir mi pedido</a></li>
-                </ul>
-                </div>
-        
-                <!--  Columna 4: Contacto + redes  -->
-                <div class="footer-col">
-                <h4>Contacto</h4>
-        
-                <div class="contact-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>España 399, Rosario, Santa Fe</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>+54 9 341 256-1684</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>RosarioSport@tienda.com</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-clock"></i>
-                    <span>Lun–Vie: 10:00 a 20:00 hs</span>
-                </div>
-        
-                <div class="social-section">
-                    <span class="social-label">Seguinos</span>
-                    <div class="social-links">
-                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-frame">
+                            <img class="carousel-frame-img" src="assets/img/Carrusel/1.png" alt="Zapatillas destacadas">
+                        </div>
+                        <div class="carousel-caption-rs">
+                            <div class="hero-eyebrow"><span class="dot"></span> NUEVA TEMPORADA 2026</div>
+                            <h2 class="display">Entrená al ritmo de Rosario</h2>
+                            <a href="#productos" class="btn-primary-rs btn-sm-rs">Ver productos</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-frame">
+                            <i class="fa-solid fa-shoe-prints placeholder-icon"></i>
+                        </div>
+                        <div class="carousel-caption-rs">
+                            <div class="hero-eyebrow"><span class="dot"></span> COLECCIÓN RUNNING</div>
+                            <h2 class="display">Cada zancada cuenta</h2>
+                            <a href="#categorias" class="btn-primary-rs btn-sm-rs">Ver running</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-frame">
+                            <i class="fa-solid fa-dumbbell placeholder-icon"></i>
+                        </div>
+                        <div class="carousel-caption-rs">
+                            <div class="hero-eyebrow"><span class="dot"></span> HASTA 20% OFF</div>
+                            <h2 class="display">Equipate para entrenar</h2>
+                            <a href="#productos" class="btn-primary-rs btn-sm-rs">Ver ofertas</a>
+                        </div>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+            <div class="track-lane"></div>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="productos" id="productos">
+        <div class="container">
+            <span class="section-label">// Destacados</span>
+            <div class="row g-4 mt-1">
+                <div class="col-6 col-lg-3">
+                    <div class="prod-card">
+                        <div class="prod-thumb">
+                            <span class="prod-badge">NUEVO</span>
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <div class="prod-body">
+                            <span class="prod-cat">Fútbol</span>
+                            <p class="prod-name">Camiseta training pro</p>
+                            <div class="prod-row">
+                                <span class="prod-price">$34.999</span>
+                                <button class="prod-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-        
+                <div class="col-6 col-lg-3">
+                    <div class="prod-card">
+                        <div class="prod-thumb">
+                            <i class="fa-solid fa-shoe-prints"></i>
+                        </div>
+                        <div class="prod-body">
+                            <span class="prod-cat">Running</span>
+                            <p class="prod-name">Zapatillas ultraliviana</p>
+                            <div class="prod-row">
+                                <span class="prod-price">$89.999</span>
+                                <button class="prod-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="prod-card">
+                        <div class="prod-thumb">
+                            <span class="prod-badge">OFERTA</span>
+                            <i class="fa-solid fa-vest"></i>
+                        </div>
+                        <div class="prod-body">
+                            <span class="prod-cat">Training</span>
+                            <p class="prod-name">Buzo técnico térmico</p>
+                            <div class="prod-row">
+                                <span class="prod-price">$42.500</span>
+                                <button class="prod-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="prod-card">
+                        <div class="prod-thumb">
+                            <i class="fa-solid fa-socks"></i>
+                        </div>
+                        <div class="prod-body">
+                            <span class="prod-cat">Fútbol</span>
+                            <p class="prod-name">Medias de juego x3</p>
+                            <div class="prod-row">
+                                <span class="prod-price">$9.999</span>
+                                <button class="prod-add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-rs">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div>
+                    <span class="brand-name">ROSARIO<span>SPORT</span></span>
+                    <p class="brand-desc">La tienda preferida de Mr. Champions. Indumentaria deportiva para quienes entrenan en serio.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Tienda</h4>
+                    <ul>
+                        <li><a href="#">Todos los productos</a></li>
+                        <li><a href="#">Novedades</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Cómo comprar</a></li>
+                        <li><a href="#">Envíos y entregas</a></li>
+                        <li><a href="#">Cambios y devoluciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <div class="contact-item"><i class="fa-solid fa-location-dot"></i><span>España 399, Rosario, Santa Fe</span></div>
+                    <div class="contact-item"><i class="fa-solid fa-phone"></i><span>+54 9 341 256-1684</span></div>
+                    <div class="contact-item"><i class="fa-solid fa-envelope"></i><span>RosarioSport@tienda.com</span></div>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
             </div>
-        
-            <!--  Barra inferior  -->
-            <div class="footer-bottom">
-            <p class="footer-copyright">
-                &copy; 2025 <strong>Rosario Sport</strong>. Todos los derechos reservados.
-            </p>
-        
-            <div class="footer-payments">
-                <span>Pagá con</span>
-                <span class="pay-badge">Visa</span>
-                <span class="pay-badge">Mastercard</span>
-                <span class="pay-badge">Mercado Pago</span>
-                <span class="pay-badge">Transferencia</span>
-            </div>
-        
-            <nav class="footer-legal" aria-label="Links legales">
-                <a href="#">Términos y condiciones</a>
-                <a href="#">Política de privacidad</a>
-                <a href="#">Cookies</a>
-            </nav>
-            </div>
-        
-        </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        </div>
+        <div class="footer-bottom">
+            <p class="mb-0">© 2026 Rosario Sport. Todos los derechos reservados.</p>
+            <p class="mb-0">Proyecto Final — Integrante 1 (Frontend)</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
