@@ -22,7 +22,7 @@
                     <li class="nav-item"><a class="nav-link active" href="categorias.html">Categorías</a></li>
                     <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                 </ul>
-                <button class="btn-cart ms-lg-3">
+                <button class="btn-cart ms-lg-3" data-bs-toggle="modal" data-bs-target="#cartModal" aria-label="Ver carrito">
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span class="badge-count">0</span>
                 </button>
@@ -72,7 +72,10 @@
                             <p class="prod-name">Zapatillas Nike Running</p>
                             <div class="prod-row">
                                 <span class="prod-price">$79.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalNike1"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalNike1" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -88,7 +91,10 @@
                             <p class="prod-name">Campera Nike Rompeviento</p>
                             <div class="prod-row">
                                 <span class="prod-price">$54.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalNike2"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalNike2" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -105,7 +111,10 @@
                             <p class="prod-name">Short Nike Training</p>
                             <div class="prod-row">
                                 <span class="prod-price">$24.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalNike3"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalNike3" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -132,7 +141,10 @@
                             <p class="prod-name">Zapatillas Adidas Running</p>
                             <div class="prod-row">
                                 <span class="prod-price">$84.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalAdidas1"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalAdidas1" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -149,7 +161,10 @@
                             <p class="prod-name">Camiseta Adidas Training</p>
                             <div class="prod-row">
                                 <span class="prod-price">$32.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalAdidas2"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalAdidas2" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -165,7 +180,10 @@
                             <p class="prod-name">Mochila Adidas Classic</p>
                             <div class="prod-row">
                                 <span class="prod-price">$29.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalAdidas3"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalAdidas3" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -190,10 +208,13 @@
                         </div>
                         <div class="prod-body">
                             <span class="prod-cat">Puma</span>
-                            <p class="prod-name">Zapatillas Puma Training</p>
+                            <p class="prod-name">Camiseta Manchester City</p>
                             <div class="prod-row">
                                 <span class="prod-price">$69.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalPuma1"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalPuma1" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -209,7 +230,10 @@
                             <p class="prod-name">Buzo Puma Essentials</p>
                             <div class="prod-row">
                                 <span class="prod-price">$47.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalPuma2"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalPuma2" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -225,7 +249,10 @@
                             <p class="prod-name">Medias Puma Deportivas x3</p>
                             <div class="prod-row">
                                 <span class="prod-price">$11.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalPuma3"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalPuma3" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -258,7 +285,10 @@
                             <p class="prod-name">Malla de Natación Pro</p>
                             <div class="prod-row">
                                 <span class="prod-price">$28.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalNat1"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalNat1" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -274,7 +304,10 @@
                             <p class="prod-name">Gorro de Silicona</p>
                             <div class="prod-row">
                                 <span class="prod-price">$6.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalNat2"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalNat2" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -291,7 +324,10 @@
                             <p class="prod-name">Antiparras Antiempañantes</p>
                             <div class="prod-row">
                                 <span class="prod-price">$9.499</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalNat3"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalNat3" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -319,7 +355,10 @@
                             <p class="prod-name">Raqueta de Tenis Pro</p>
                             <div class="prod-row">
                                 <span class="prod-price">$64.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalTenis1"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalTenis1" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -335,7 +374,10 @@
                             <p class="prod-name">Zapatillas para Polvo de Ladrillo</p>
                             <div class="prod-row">
                                 <span class="prod-price">$74.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalTenis2"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalTenis2" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -351,7 +393,10 @@
                             <p class="prod-name">Tubo de Pelotas x3</p>
                             <div class="prod-row">
                                 <span class="prod-price">$8.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalTenis3"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalTenis3" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -379,7 +424,10 @@
                             <p class="prod-name">Camiseta Argentina 86</p>
                             <div class="prod-row">
                                 <span class="prod-price">$59.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalFutbol1"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalFutbol1" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -395,7 +443,10 @@
                             <p class="prod-name">Pelota de Fútbol N°5</p>
                             <div class="prod-row">
                                 <span class="prod-price">$22.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalFutbol2"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalFutbol2" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -412,7 +463,10 @@
                             <p class="prod-name">Guantes de Arquero</p>
                             <div class="prod-row">
                                 <span class="prod-price">$18.999</span>
-                                <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalFutbol3"><i class="fa-solid fa-eye"></i></button>
+                                <div class="prod-actions">
+                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalFutbol3" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
+                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -434,7 +488,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-shoe-prints"></i></div>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/nike-zapatillas.jpg" alt="Zapatillas Nike Running"></div>
                     <p>Zapatillas livianas pensadas para largas distancias, con entresuela amortiguada y mesh transpirable.</p>
                     <ul class="spec-list">
                         <li><i class="fa-solid fa-check"></i>Talles: 38 al 45</li>
@@ -458,7 +512,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-vest"></i></div>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/campera-rompeviento-nike-windrunner-blanca-510020da0001084-1.webp" alt="Campera Nike Rompeviento"></div>
                     <p>Campera liviana resistente al viento, ideal para entrenar al aire libre en cualquier estación.</p>
                     <ul class="spec-list">
                         <li><i class="fa-solid fa-check"></i>Talles: S al XL</li>
@@ -482,7 +536,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-shirt"></i></div>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/nike-short.jpeg" alt="Short Nike Training"></div>
                     <p>Short deportivo de secado rápido, con bolsillo interno y elástico ajustable en la cintura.</p>
                     <ul class="spec-list">
                         <li><i class="fa-solid fa-check"></i>Talles: S al XL</li>
@@ -507,7 +561,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-shoe-prints"></i></div>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/adidas-running.jpeg" alt="Zapatillas Adidas Running"></div>
                     <p>Zapatillas con amortiguación de alta respuesta, pensadas para entrenamientos diarios.</p>
                     <ul class="spec-list">
                         <li><i class="fa-solid fa-check"></i>Talles: 38 al 45</li>
@@ -531,7 +585,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-shirt"></i></div>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/adidas-training.webp" alt="Camiseta Adidas Training"></div>
                     <p>Camiseta transpirable con tejido que ayuda a mantener el cuerpo seco durante el entrenamiento.</p>
                     <ul class="spec-list">
                         <li><i class="fa-solid fa-check"></i>Talles: XS al XXL</li>
@@ -555,7 +609,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-bag-shopping"></i></div>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/adidas-mochila.jpeg" alt="Mochila Adidas Classic"></div>
                     <p>Mochila resistente con compartimento acolchado para notebook y espacio para indumentaria deportiva.</p>
                     <ul class="spec-list">
                         <li><i class="fa-solid fa-check"></i>Capacidad: 22 litros</li>
@@ -576,15 +630,15 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Zapatillas Puma Training</h5>
+                    <h5 class="modal-title">Camiseta Manchester City</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-shoe-prints"></i></div>
-                    <p>Zapatillas versátiles para entrenamiento funcional, con suela antideslizante y buen soporte lateral.</p>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/puma-manchester.jpg" alt="Camiseta Manchester City"></div>
+                    <p>Camiseta oficial del Manchester City, fabricada por Puma con tejido transpirable DryCELL para un mejor rendimiento en cancha.</p>
                     <ul class="spec-list">
-                        <li><i class="fa-solid fa-check"></i>Talles: 38 al 45</li>
-                        <li><i class="fa-solid fa-check"></i>Uso: Training / gimnasio</li>
+                        <li><i class="fa-solid fa-check"></i>Talles: S al XXL</li>
+                        <li><i class="fa-solid fa-check"></i>Material: Poliéster DryCELL</li>
                         <li><i class="fa-solid fa-check"></i>Marca: Puma</li>
                     </ul>
                 </div>
@@ -604,7 +658,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-vest"></i></div>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/puma-buzo.jpeg" alt="Buzo Puma Essentials"></div>
                     <p>Buzo de algodón con capucha, ideal para entrada en calor o para el día a día.</p>
                     <ul class="spec-list">
                         <li><i class="fa-solid fa-check"></i>Talles: S al XL</li>
@@ -628,7 +682,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-socks"></i></div>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/puma-medias.webp" alt="Medias Puma Deportivas x3"></div>
                     <p>Pack de 3 pares de medias acolchadas en la zona del talón, con buena transpirabilidad.</p>
                     <ul class="spec-list">
                         <li><i class="fa-solid fa-check"></i>Talles: 35/38 — 39/42 — 43/46</li>
@@ -653,7 +707,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-person-swimming"></i></div>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/natacion-malla.jpg" alt="Malla de Natación Pro"></div>
                     <p>Malla profesional resistente al cloro, con tela de compresión que reduce la resistencia al agua.</p>
                     <ul class="spec-list">
                         <li><i class="fa-solid fa-check"></i>Talles: XS al XL</li>
@@ -677,7 +731,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-circle"></i></div>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/natacion-gorro.jpg" alt="Gorro de Silicona"></div>
                     <p>Gorro siliconado de ajuste anatómico que protege el cabello del cloro y reduce la resistencia.</p>
                     <ul class="spec-list">
                         <li><i class="fa-solid fa-check"></i>Talla: Única (elástico)</li>
@@ -701,7 +755,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-glasses"></i></div>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/natacion-antiparras.jpg" alt="Antiparras Antiempañantes"></div>
                     <p>Antiparras con lente UV400 antiempañante y sello de silicona de doble aro para mayor comodidad.</p>
                     <ul class="spec-list">
                         <li><i class="fa-solid fa-check"></i>Lente: UV400 antiempañante</li>
@@ -726,7 +780,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-table-tennis-paddle-ball"></i></div>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/tenis-raqueta.webp" alt="Raqueta de Tenis Pro"></div>
                     <p>Raqueta de aro liviano con buen balance entre potencia y control, ideal para jugadores intermedios.</p>
                     <ul class="spec-list">
                         <li><i class="fa-solid fa-check"></i>Peso: 300 g sin encordar</li>
@@ -750,7 +804,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-shoe-prints"></i></div>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/tenis-zapatilas.webp" alt="Zapatillas para Polvo de Ladrillo"></div>
                     <p>Zapatillas con suela espinada de herringbone, diseñadas para superficies de polvo de ladrillo.</p>
                     <ul class="spec-list">
                         <li><i class="fa-solid fa-check"></i>Talles: 38 al 45</li>
@@ -774,7 +828,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-circle-dot"></i></div>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/tenis-tubopelotas.jpeg" alt="Tubo de Pelotas x3"></div>
                     <p>Pelotas de tenis presurizadas de alta durabilidad, aptas para todo tipo de superficie.</p>
                     <ul class="spec-list">
                         <li><i class="fa-solid fa-check"></i>Contenido: Tubo x3</li>
@@ -795,16 +849,16 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Botines de Fútbol Profesionales</h5>
+                    <h5 class="modal-title">Camiseta Argentina 86</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-shoe-prints"></i></div>
-                    <p>Botines para césped natural con suela de tacos intercambiables y capellada de alta durabilidad.</p>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/ArgentinaLCQ86.jpg" alt="Camiseta Argentina 86"></div>
+                    <p>Réplica retro de la camiseta de la Selección Argentina campeona del mundo en 1986, fabricada por Le Coq Sportif con el escudo de la AFA bordado en el pecho.</p>
                     <ul class="spec-list">
-                        <li><i class="fa-solid fa-check"></i>Talles: 38 al 46</li>
-                        <li><i class="fa-solid fa-check"></i>Superficie: Césped natural</li>
-                        <li><i class="fa-solid fa-check"></i>Suela: Tacos intercambiables</li>
+                        <li><i class="fa-solid fa-check"></i>Talles: S al XXL</li>
+                        <li><i class="fa-solid fa-check"></i>Material: Poliéster, corte clásico</li>
+                        <li><i class="fa-solid fa-check"></i>Edición: Retro conmemorativa 86</li>
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -823,7 +877,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-futbol"></i></div>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/futbol-pelota.webp" alt="Pelota de Fútbol N°5"></div>
                     <p>Pelota oficial N°5 con cobertura termofusionada, pensada para mayor precisión en el juego.</p>
                     <ul class="spec-list">
                         <li><i class="fa-solid fa-check"></i>Tamaño: N°5 oficial</li>
@@ -847,7 +901,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-mitten"></i></div>
+                    <div class="modal-thumb"><img class="modal-thumb-img" src="assets/img/productos/futbol-guantes.webp" alt="Guantes de Arquero"></div>
                     <p>Guantes con palma de látex de alta adherencia y protección en los dedos contra impactos.</p>
                     <ul class="spec-list">
                         <li><i class="fa-solid fa-check"></i>Talles: 7 al 10</li>
@@ -872,14 +926,6 @@
                     <p class="brand-desc">La tienda preferida de Mr. Champions. Indumentaria deportiva para quienes entrenan en serio.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Tienda</h4>
-                    <ul>
-                        <li><a href="#">Todos los productos</a></li>
-                        <li><a href="#">Novedades</a></li>
-                        <li><a href="#">Ofertas</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
                     <h4>Ayuda</h4>
                     <ul>
                         <li><a href="#">Cómo comprar</a></li>
@@ -902,10 +948,34 @@
         </div>
         <div class="footer-bottom">
             <p class="mb-0">© 2026 Rosario Sport. Todos los derechos reservados.</p>
-            <p class="mb-0">Proyecto Final — Integrante 1 (Frontend)</p>
         </div>
     </footer>
 
+    <!-- MODAL CARRITO -->
+    <div class="modal fade modal-rs" id="cartModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tu carrito</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="cart-empty" id="cartEmptyMsg">Todavía no agregaste productos.</p>
+                    <div id="cartItemsList"></div>
+                    <div class="cart-total-row">
+                        <span>Total</span>
+                        <span id="cartTotal">$0</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-secondary-rs" data-bs-dismiss="modal">Seguir comprando</button>
+                    <button type="button" class="btn-primary-rs btn-sm-rs">Finalizar compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/cart.js"></script>
 </body>
 </html>
