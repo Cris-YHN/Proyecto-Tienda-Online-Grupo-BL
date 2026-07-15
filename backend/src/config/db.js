@@ -18,7 +18,7 @@ const config = {
 async function conectarDB() {
     try {
 
-        console.log(config);
+        //console.log(config);
 
         const pool = await sql.connect(config);
         console.log("Conexión a SQL Server establecida correctamente.");
