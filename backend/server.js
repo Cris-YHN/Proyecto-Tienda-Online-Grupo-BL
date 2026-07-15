@@ -1,7 +1,8 @@
-const express = require("express");
-const cors = require("cors");
 require("dotenv").config();
 
+const express = require("express");
+const cors = require("cors");
+const { conectarDB } = require("./src/config/db");
 const app = express();
 
 // Importar rutas
@@ -19,8 +20,9 @@ app.get("/", (req, res) => {
 // Rutas de la API
 app.use("/api/productos", productoRoutes);
 
-// Puerto
 const PORT = process.env.PORT || 3000;
+
+conectarDB();
 
 app.listen(PORT, () => {
     console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
