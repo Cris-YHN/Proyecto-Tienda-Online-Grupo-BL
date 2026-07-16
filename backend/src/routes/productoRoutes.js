@@ -1,11 +1,13 @@
 const express = require("express");
+
 const router = express.Router();
 
 const {
-    obtenerProductos
+    obtenerProductos,
+    obtenerProductoPorId
 } = require("../controllers/productoController");
 
-// GET /api/productos
 router.get("/", obtenerProductos);
+router.get("/:id", obtenerProductoPorId);
 
 module.exports = router;

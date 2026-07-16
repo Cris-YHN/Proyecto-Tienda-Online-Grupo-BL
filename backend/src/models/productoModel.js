@@ -1,22 +1,40 @@
-// Datos temporales mientras se integra SQL Server
+const { conectarDB } = require("../config/db");
 
-const productos = [
-    {
-        id: 1,
-        nombre: "Remera Deportiva",
-        precio: 25000
-    },
-    {
-        id: 2,
-        nombre: "Short Running",
-        precio: 18000
+async function obtenerProductos() {
+    try {
+        const pool = await conectarDB();
+
+        const resultado = await pool.request().query(`
+            SELECT *
+            FROM Productos
+        `);
+
+        return resultado.recordset;
+    } catch (error) {
+        throw error;
     }
-];
+}
 
-const obtenerTodos = () => {
-    return productos;
-};
+async function obtenerProductoPorId(id) {
+    try {
+        const pool = await conectarDB();
+
+        const resultado = await pool
+            .request()
+            .input("id", id)
+            .query(`
+                SELECT *
+                FROM Productos
+                WHERE id_producto = @id
+            `);
+
+        return resultado.recordset[0];
+    } catch (error) {
+        throw error;
+    }
+}
 
 module.exports = {
-    obtenerTodos
+    obtenerProductos,
+    obtenerProductoPorId
 };
