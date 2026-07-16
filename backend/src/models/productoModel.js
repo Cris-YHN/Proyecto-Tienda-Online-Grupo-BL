@@ -5,8 +5,17 @@ async function obtenerProductos() {
         const pool = await conectarDB();
 
         const resultado = await pool.request().query(`
-            SELECT *
-            FROM Productos
+            SELECT
+                p.id_producto,
+                p.nombre,
+                p.marca,
+                p.descripcion,
+                p.precio,
+                p.stock,
+                p.imagen,
+                c.nombre AS categoria
+            FROM Productos p
+            INNER JOIN Categorias c ON p.id_categoria = c.id_categoria
         `);
 
         return resultado.recordset;
@@ -23,9 +32,12 @@ async function obtenerProductoPorId(id) {
             .request()
             .input("id", id)
             .query(`
-                SELECT *
-                FROM Productos
-                WHERE id_producto = @id
+                SELECT 
+                    p.id_producto, p.nombre, p.marca, p.descripcion, 
+                    p.precio, p.stock, p.imagen, c.nombre AS categoria
+                FROM Productos p
+                INNER JOIN Categorias c ON p.id_categoria = c.id_categoria
+                WHERE p.id_producto = @id
             `);
 
         return resultado.recordset[0];

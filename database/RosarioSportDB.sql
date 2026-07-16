@@ -1,48 +1,9 @@
-/*
-Proyecto: Rosario Sport
-Base de Datos: SQL Server
-*/
-
--- Crear la base de datos
-CREATE DATABASE RosarioSportDB;
-GO
-
--- Seleccionar la base de datos
-USE RosarioSportDB;
-GO
-
--- TABLA: Categorias
--- Guarda las categorías deportivas de la tienda
-
-
+-- 1. Tablas independientes
 CREATE TABLE Categorias (
     id_categoria INT IDENTITY(1,1) PRIMARY KEY,
     nombre NVARCHAR(100) NOT NULL
 );
 GO
-
--- TABLA: Productos
--- Guarda los productos deportivos de la tienda
-
-
-CREATE TABLE Productos (
-    id_producto INT IDENTITY(1,1) PRIMARY KEY,
-    nombre NVARCHAR(150) NOT NULL,
-    descripcion NVARCHAR(500) NULL,
-    precio DECIMAL(10,2) NOT NULL,
-    stock INT NOT NULL,
-    imagen NVARCHAR(255) NULL,
-    id_categoria INT NOT NULL,
-
-    CONSTRAINT FK_Productos_Categorias
-        FOREIGN KEY (id_categoria)
-        REFERENCES Categorias(id_categoria)
-);
-GO
-
--- TABLA: Usuarios
--- Guarda la información de los clientes
-
 
 CREATE TABLE Usuarios (
     id_usuario INT IDENTITY(1,1) PRIMARY KEY,
@@ -55,8 +16,22 @@ CREATE TABLE Usuarios (
 );
 GO
 
--- TABLA: Pedidos
--- Guarda los pedidos realizados por los usuarios
+-- 2. Tablas dependientes
+CREATE TABLE Productos (
+    id_producto INT IDENTITY(1,1) PRIMARY KEY,
+    nombre NVARCHAR(150) NOT NULL,
+    marca NVARCHAR(50), -- Aquí agregué la columna
+    descripcion NVARCHAR(500) NULL,
+    precio DECIMAL(10,2) NOT NULL,
+    stock INT NOT NULL,
+    imagen NVARCHAR(255) NULL,
+    id_categoria INT NOT NULL,
+
+    CONSTRAINT FK_Productos_Categorias
+        FOREIGN KEY (id_categoria)
+        REFERENCES Categorias(id_categoria)
+);
+GO
 
 CREATE TABLE Pedidos (
     id_pedido INT IDENTITY(1,1) PRIMARY KEY,
@@ -70,8 +45,6 @@ CREATE TABLE Pedidos (
         REFERENCES Usuarios(id_usuario)
 );
 GO
--- TABLA: DetallePedido
--- Guarda los productos incluidos en cada pedido
 
 CREATE TABLE DetallePedido (
     id_detalle INT IDENTITY(1,1) PRIMARY KEY,
@@ -79,47 +52,20 @@ CREATE TABLE DetallePedido (
     id_producto INT NOT NULL,
     cantidad INT NOT NULL,
     precio_unitario DECIMAL(10,2) NOT NULL,
+    
     CONSTRAINT FK_DetallePedido_Pedidos
         FOREIGN KEY (id_pedido)
         REFERENCES Pedidos(id_pedido),
-
     CONSTRAINT FK_DetallePedido_Productos
         FOREIGN KEY (id_producto)
         REFERENCES Productos(id_producto)
 );
 GO
 
-
--- RESTRICCIONES DE INTEGRIDAD
--- Evitan que se ingresen datos inválidos
-
-
--- El precio de un producto no puede ser negativo
-ALTER TABLE Productos
-ADD CONSTRAINT CK_Productos_Precio
-CHECK (precio >= 0);
-GO
-
--- El stock no puede ser negativo
-ALTER TABLE Productos
-ADD CONSTRAINT CK_Productos_Stock
-CHECK (stock >= 0);
-GO
-
--- El total de un pedido no puede ser negativo
-ALTER TABLE Pedidos
-ADD CONSTRAINT CK_Pedidos_Total
-CHECK (total >= 0);
-GO
-
--- La cantidad de productos debe ser mayor que cero
-ALTER TABLE DetallePedido
-ADD CONSTRAINT CK_DetallePedido_Cantidad
-CHECK (cantidad > 0);
-GO
-
--- El precio unitario no puede ser negativo
-ALTER TABLE DetallePedido
-ADD CONSTRAINT CK_DetallePedido_Precio
-CHECK (precio_unitario >= 0);
+-- 3. Restricciones finales (CHECKS)
+ALTER TABLE Productos ADD CONSTRAINT CK_Productos_Precio CHECK (precio >= 0);
+ALTER TABLE Productos ADD CONSTRAINT CK_Productos_Stock CHECK (stock >= 0);
+ALTER TABLE Pedidos ADD CONSTRAINT CK_Pedidos_Total CHECK (total >= 0);
+ALTER TABLE DetallePedido ADD CONSTRAINT CK_DetallePedido_Cantidad CHECK (cantidad > 0);
+ALTER TABLE DetallePedido ADD CONSTRAINT CK_DetallePedido_Precio CHECK (precio_unitario >= 0);
 GO
