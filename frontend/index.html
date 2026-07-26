@@ -87,177 +87,28 @@
     <section class="productos" id="productos">
         <div class="container">
             <span class="section-label">// Destacados</span>
-            <div class="row g-4 mt-1">
-                <div class="col-6 col-lg-3">
-                    <div class="prod-card">
-                        <div class="prod-thumb">
-                            <span class="prod-badge">NUEVO</span>
-                            <i class="fa-solid fa-shirt"></i>
-                        </div>
-                        <div class="prod-body">
-                            <span class="prod-cat">Fútbol</span>
-                            <p class="prod-name">Camiseta training pro</p>
-                            <div class="prod-row">
-                                <span class="prod-price">$34.999</span>
-                                <div class="prod-actions">
-                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalDest1" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
-                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                    <div class="prod-card">
-                        <div class="prod-thumb">
-                            <i class="fa-solid fa-shoe-prints"></i>
-                        </div>
-                        <div class="prod-body">
-                            <span class="prod-cat">Running</span>
-                            <p class="prod-name">Zapatillas ultraliviana</p>
-                            <div class="prod-row">
-                                <span class="prod-price">$89.999</span>
-                                <div class="prod-actions">
-                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalDest2" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
-                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                    <div class="prod-card">
-                        <div class="prod-thumb">
-                            <span class="prod-badge">OFERTA</span>
-                            <i class="fa-solid fa-vest"></i>
-                        </div>
-                        <div class="prod-body">
-                            <span class="prod-cat">Training</span>
-                            <p class="prod-name">Buzo técnico térmico</p>
-                            <div class="prod-row">
-                                <span class="prod-price">$42.500</span>
-                                <div class="prod-actions">
-                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalDest3" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
-                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                    <div class="prod-card">
-                        <div class="prod-thumb">
-                            <i class="fa-solid fa-socks"></i>
-                        </div>
-                        <div class="prod-body">
-                            <span class="prod-cat">Fútbol</span>
-                            <p class="prod-name">Medias de juego x3</p>
-                            <div class="prod-row">
-                                <span class="prod-price">$9.999</span>
-                                <div class="prod-actions">
-                                    <button class="prod-add" data-bs-toggle="modal" data-bs-target="#modalDest4" aria-label="Ver detalle"><i class="fa-solid fa-eye"></i></button>
-                                    <button class="prod-add btn-add-cart" type="button" aria-label="Agregar al carrito"><i class="fa-solid fa-plus"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="row g-4 mt-1" id="destacados-row">
+                <!-- Las cards las genera assets/js/productos.js -->
             </div>
         </div>
     </section>
 
-    <!-- MODALES DESTACADOS -->
-    <div class="modal fade modal-rs" id="modalDest1" tabindex="-1" aria-hidden="true">
+    <!-- MODAL COMPARTIDO DE DETALLE DE PRODUCTO -->
+    <div class="modal fade modal-rs" id="productModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Camiseta training pro</h5>
+                    <h5 class="modal-title" id="productModalLabel"></h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-shirt"></i></div>
-                    <p>Camiseta de entrenamiento transpirable, ideal para pretemporada y trabajo físico diario.</p>
-                    <ul class="spec-list">
-                        <li><i class="fa-solid fa-check"></i>Talles: S al XL</li>
-                        <li><i class="fa-solid fa-check"></i>Material: Poliéster Dri-Fit</li>
-                        <li><i class="fa-solid fa-check"></i>Uso: Entrenamiento / Fútbol</li>
-                    </ul>
+                    <div class="modal-thumb"><img class="modal-thumb-img" id="productModalImg" src="" alt=""></div>
+                    <p id="productModalDesc"></p>
+                    <ul class="spec-list" id="productModalSpecs"></ul>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn-secondary-rs" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn-primary-rs btn-sm-rs">Agregar al carrito</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade modal-rs" id="modalDest2" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Zapatillas ultraliviana</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-shoe-prints"></i></div>
-                    <p>Zapatillas de peso mínimo pensadas para largas distancias, con buen retorno de energía.</p>
-                    <ul class="spec-list">
-                        <li><i class="fa-solid fa-check"></i>Talles: 38 al 45</li>
-                        <li><i class="fa-solid fa-check"></i>Peso: 220 g aprox.</li>
-                        <li><i class="fa-solid fa-check"></i>Uso: Running / calle</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn-secondary-rs" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn-primary-rs btn-sm-rs">Agregar al carrito</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade modal-rs" id="modalDest3" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Buzo técnico térmico</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-vest"></i></div>
-                    <p>Buzo con interior polar que retiene el calor, pensado para entrenar al aire libre en días fríos.</p>
-                    <ul class="spec-list">
-                        <li><i class="fa-solid fa-check"></i>Talles: S al XL</li>
-                        <li><i class="fa-solid fa-check"></i>Material: Interior polar térmico</li>
-                        <li><i class="fa-solid fa-check"></i>Uso: Training / outdoor</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn-secondary-rs" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn-primary-rs btn-sm-rs">Agregar al carrito</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade modal-rs" id="modalDest4" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Medias de juego x3</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-thumb"><i class="fa-solid fa-socks"></i></div>
-                    <p>Pack de 3 pares de medias de juego, con refuerzo en talón y punta para mayor durabilidad.</p>
-                    <ul class="spec-list">
-                        <li><i class="fa-solid fa-check"></i>Talles: 35/38 — 39/42 — 43/46</li>
-                        <li><i class="fa-solid fa-check"></i>Contenido: Pack x3</li>
-                        <li><i class="fa-solid fa-check"></i>Uso: Partido / entrenamiento</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn-secondary-rs" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn-primary-rs btn-sm-rs">Agregar al carrito</button>
+                    <button type="button" class="btn-primary-rs btn-sm-rs" id="productModalAddBtn">Agregar al carrito</button>
                 </div>
             </div>
         </div>
@@ -294,6 +145,7 @@
         </div>
         <div class="footer-bottom">
             <p class="mb-0">© 2026 Rosario Sport. Todos los derechos reservados.</p>
+            <p class="mb-0">Proyecto Final — Integrante 1 (Frontend)</p>
         </div>
     </footer>
 
@@ -323,5 +175,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/cart.js"></script>
+    <script src="assets/js/productos.js"></script>
 </body>
 </html>

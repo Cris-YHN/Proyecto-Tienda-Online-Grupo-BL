@@ -7,9 +7,9 @@ const config = {
     password: process.env.DB_PASSWORD,
     server: process.env.DB_SERVER,
     database: process.env.DB_DATABASE,
+    port: 1433, // instancia por defecto del contenedor Docker, sin nombre de instancia
 
     options: {
-        instanceName: "SQLEXPRESS",
         encrypt: false,
         trustServerCertificate: true,
         enableArithAbort: true
@@ -18,7 +18,6 @@ const config = {
 
 async function conectarDB() {
     try {
-        console.log(config);
         const pool = await sql.connect(config);
         console.log("Conexión a SQL Server establecida correctamente.");
         return pool;

@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+const path = require("path");
 const express = require("express");
 const cors = require("cors");
 const { conectarDB } = require("./src/config/db");
@@ -12,8 +13,12 @@ const productoRoutes = require("./src/routes/productoRoutes");
 app.use(cors());
 app.use(express.json());
 
-// Ruta de prueba
-app.get("/", (req, res) => {
+// Sirve el frontend (index.html, categorias.html, contacto.html, assets/...)
+// Con esto, http://localhost:3000 ya muestra la página directamente.
+app.use(express.static(path.join(__dirname, "../frontend")));
+
+// Ruta de prueba de la API (antes vivía en "/", pero ahí ahora se sirve el frontend)
+app.get("/api/ping", (req, res) => {
     res.send("Servidor funcionando correctamente");
 });
 
