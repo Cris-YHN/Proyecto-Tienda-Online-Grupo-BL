@@ -1,1 +1,1 @@
-
+Esta carpeta contiene el Modelo Entidad-Relación (MER) de la base de datos del proyecto Rosario Sport. Incluye el diagrama que representa las entidades, sus atributos y las relaciones entre ellas, sirviendo como referencia para el desarrollo e integración del backend con SQL Server.
