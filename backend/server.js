@@ -8,6 +8,8 @@ const app = express();
 
 // Importar rutas
 const productoRoutes = require("./src/routes/productoRoutes");
+const usuarioRoutes = require("./src/routes/usuarioRoutes");
+const pedidoRoutes = require("./src/routes/pedidoRoutes");
 
 // Middlewares
 app.use(cors());
@@ -24,6 +26,8 @@ app.get("/api/ping", (req, res) => {
 
 // Rutas de la API
 app.use("/api/productos", productoRoutes);
+app.use("/api/usuarios", usuarioRoutes);
+app.use("/api/pedidos", pedidoRoutes);
 
 const PORT = process.env.PORT || 3000;
 

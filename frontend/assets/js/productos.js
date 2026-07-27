@@ -70,7 +70,7 @@
     function cardHTML(p) {
         return (
             '<div class="col-6 col-lg-4">' +
-                '<div class="prod-card">' +
+                '<div class="prod-card" data-id="' + p.id_producto + '">' +
                     '<div class="prod-thumb">' +
                         badgeHTML(p.badge) +
                         '<img class="prod-thumb-img" src="' + p.imagen + '" alt="' + p.nombre + '">' +
@@ -128,6 +128,7 @@
 
         // el botón "Agregar al carrito" del modal necesita saber qué producto mostrar
         const modalEl = document.getElementById("productModal");
+        modalEl.dataset.currentId = p.id_producto;
         modalEl.dataset.currentName = p.nombre;
         modalEl.dataset.currentPrice = formatPrice(p.precio);
 
@@ -147,10 +148,11 @@
         const modalAddBtn = e.target.closest("#productModalAddBtn");
         if (modalAddBtn) {
             const modalEl = document.getElementById("productModal");
+            const id = parseInt(modalEl.dataset.currentId, 10);
             const name = modalEl.dataset.currentName;
             const priceText = modalEl.dataset.currentPrice;
             if (name && window.RosarioCart) {
-                window.RosarioCart.addToCart(name, priceText);
+                window.RosarioCart.addToCart(id, name, priceText);
             }
         }
     });

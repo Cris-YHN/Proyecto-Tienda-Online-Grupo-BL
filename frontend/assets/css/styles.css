@@ -754,3 +754,16 @@ body {
     color: var(--accent);
     font-size: 1.15rem;
 }
+
+/* ══════════ TABS LOGIN/REGISTRO (cuenta.html) ══════════ */
+.cat-jumplinks a.active-tab {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(0, 229, 168, 0.08);
+}
+ 
+/* Ícono de cuenta con sesión iniciada */
+.btn-cart.logueado {
+    border-color: var(--accent);
+    color: var(--accent);
+}
