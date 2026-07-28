@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías | Rosario Sport</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-rs">
+        <div class="container">
+            <a class="navbar-brand" href="index-preview.html">ROSARIO<span>SPORT</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="categorias.html">Categorías</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+                <a href="login.html" class="btn-cart ms-lg-3 me-2" id="btn-account" aria-label="Mi cuenta">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <button class="btn-cart ms-lg-2" data-bs-toggle="modal" data-bs-target="#cartModal" aria-label="Ver carrito">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- INTRO -->
+    <section class="container page-hero">
+        <span class="section-label">// Categorías</span>
+        <h1>Explorá por marca y por deporte</h1>
+        <p>Encontrá lo que buscás.</p>
+        <div class="cat-jumplinks">
+            <a href="#nike"><i class="fa-solid fa-tag me-1"></i> Nike</a>
+            <a href="#adidas"><i class="fa-solid fa-tag me-1"></i> Adidas</a>
+            <a href="#puma"><i class="fa-solid fa-tag me-1"></i> Puma</a>
+            <a href="#natacion"><i class="fa-solid fa-person-swimming me-1"></i> Natación</a>
+            <a href="#tenis"><i class="fa-solid fa-table-tennis-paddle-ball me-1"></i> Tenis</a>
+            <a href="#futbol"><i class="fa-solid fa-futbol me-1"></i> Fútbol</a>
+        </div>
+    </section>
+
+    <main class="container" style="padding-bottom: 2rem;">
+
+        <!-- ═══════════ POR MARCA ═══════════ -->
+        <div class="cat-group-label">
+            <span>// Marca</span>
+            <span class="line"></span>
+        </div>
+
+        <!-- NIKE -->
+        <section class="cat-section" id="nike">
+            <div class="cat-section-header">
+                <h2>Nike</h2>
+                <span>3 productos</span>
+            </div>
+            <div class="row g-4" id="nike-row">
+                <!-- Las cards de esta sección las genera assets/js/productos.js -->
+            </div>
+        </section>
+
+        <!-- ADIDAS -->
+        <section class="cat-section" id="adidas">
+            <div class="cat-section-header">
+                <h2>Adidas</h2>
+                <span>3 productos</span>
+            </div>
+            <div class="row g-4" id="adidas-row">
+                <!-- Las cards de esta sección las genera assets/js/productos.js -->
+            </div>
+        </section>
+
+        <!-- PUMA -->
+        <section class="cat-section" id="puma">
+            <div class="cat-section-header">
+                <h2>Puma</h2>
+                <span>3 productos</span>
+            </div>
+            <div class="row g-4" id="puma-row">
+                <!-- Las cards de esta sección las genera assets/js/productos.js -->
+            </div>
+        </section>
+
+        <!-- ═══════════ POR DEPORTE ═══════════ -->
+        <div class="cat-group-label">
+            <span>// Deporte</span>
+            <span class="line"></span>
+        </div>
+
+        <!-- NATACIÓN -->
+        <section class="cat-section" id="natacion">
+            <div class="cat-section-header">
+                <h2>Natación</h2>
+                <span>3 productos</span>
+            </div>
+            <div class="row g-4" id="natacion-row">
+                <!-- Las cards de esta sección las genera assets/js/productos.js -->
+            </div>
+        </section>
+
+        <!-- TENIS -->
+        <section class="cat-section" id="tenis">
+            <div class="cat-section-header">
+                <h2>Tenis</h2>
+                <span>3 productos</span>
+            </div>
+            <div class="row g-4" id="tenis-row">
+                <!-- Las cards de esta sección las genera assets/js/productos.js -->
+            </div>
+        </section>
+
+        <!-- FÚTBOL -->
+        <section class="cat-section" id="futbol">
+            <div class="cat-section-header">
+                <h2>Fútbol</h2>
+                <span>3 productos</span>
+            </div>
+            <div class="row g-4" id="futbol-row">
+                <!-- Las cards de esta sección las genera assets/js/productos.js -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL COMPARTIDO DE DETALLE DE PRODUCTO -->
+    <!-- Antes había 18 modales fijos (uno por producto). Ahora hay uno solo,
+         y assets/js/productos.js completa su contenido según qué card se clickeó. -->
+    <div class="modal fade modal-rs" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-thumb"><img class="modal-thumb-img" id="productModalImg" src="" alt=""></div>
+                    <p id="productModalDesc"></p>
+                    <ul class="spec-list" id="productModalSpecs"></ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-secondary-rs" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn-primary-rs btn-sm-rs" id="productModalAddBtn">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-rs">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div>
+                    <span class="brand-name">ROSARIO<span>SPORT</span></span>
+                    <p class="brand-desc">La tienda preferida de Mr. Champions. Indumentaria deportiva para quienes entrenan en serio.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Cómo comprar</a></li>
+                        <li><a href="#">Envíos y entregas</a></li>
+                        <li><a href="#">Cambios y devoluciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <div class="contact-item"><i class="fa-solid fa-location-dot"></i><span>España 399, Rosario, Santa Fe</span></div>
+                    <div class="contact-item"><i class="fa-solid fa-phone"></i><span>+54 9 341 256-1684</span></div>
+                    <div class="contact-item"><i class="fa-solid fa-envelope"></i><span>RosarioSport@tienda.com</span></div>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="mb-0">© 2026 Rosario Sport. Todos los derechos reservados.</p>
+            <p class="mb-0">Proyecto Final — Integrante 1 (Frontend)</p>
+        </div>
+    </footer>
+
+    <!-- MODAL CARRITO -->
+    <div class="modal fade modal-rs" id="cartModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tu carrito</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="cart-empty" id="cartEmptyMsg">Todavía no agregaste productos.</p>
+                    <div id="cartItemsList"></div>
+                    <div class="cart-total-row">
+                        <span>Total</span>
+                        <span id="cartTotal">$0</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-secondary-rs" data-bs-dismiss="modal">Seguir comprando</button>
+                    <button type="button" class="btn-primary-rs btn-sm-rs" id="btnFinalizarCompra">Finalizar compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL LOGIN REQUERIDO -->
+    <div class="modal fade modal-rs" id="loginRequiredModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciá sesión para continuar</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-0">Necesitás iniciar sesión o crear una cuenta para poder finalizar tu compra.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-secondary-rs" data-bs-dismiss="modal">Seguir comprando</button>
+                    <a href="login.html" class="btn-primary-rs btn-sm-rs">Iniciar sesión</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/productos.js"></script>
+</body>
+</html>
