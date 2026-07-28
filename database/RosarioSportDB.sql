@@ -1,3 +1,10 @@
+-- 0. Crear la base de datos
+CREATE DATABASE RosarioSportDB;
+GO
+
+USE RosarioSportDB;
+GO
+
 -- 1. Tablas independientes
 CREATE TABLE Categorias (
     id_categoria INT IDENTITY(1,1) PRIMARY KEY,
