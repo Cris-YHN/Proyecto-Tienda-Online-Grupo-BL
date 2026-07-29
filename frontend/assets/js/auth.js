@@ -43,6 +43,69 @@
         }
     }
 
+    // ---------- Validaciones ----------
+
+    const REGEX_NOMBRE = /^[A-Za-zÀ-ÿ\s]{2,50}$/;
+    const REGEX_EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const REGEX_TELEFONO = /^\+?[0-9\s-]{7,15}$/;
+    const REGEX_PASSWORD_MAYUS = /[A-Z]/;
+    const REGEX_PASSWORD_MINUS = /[a-z]/;
+    const REGEX_PASSWORD_NUM = /[0-9]/;
+    const REGEX_PASSWORD_ESPECIAL = /[^A-Za-z0-9]/;
+
+    // Valida los datos del login. Devuelve el primer mensaje de error o null si está OK.
+    function validarLogin(email, contraseña) {
+        if (!email) return "Ingresá tu email.";
+        if (!REGEX_EMAIL.test(email)) return "El email no tiene un formato válido.";
+        if (!contraseña) return "Ingresá tu contraseña.";
+        return null;
+    }
+
+    // Valida los datos del registro. Devuelve el primer mensaje de error o null si está OK.
+    function validarRegistro(datos) {
+        if (!datos.nombre) return "El nombre es obligatorio.";
+        if (!REGEX_NOMBRE.test(datos.nombre)) {
+            return "El nombre debe tener entre 2 y 50 caracteres y solo letras.";
+        }
+
+        if (!datos.apellido) return "El apellido es obligatorio.";
+        if (!REGEX_NOMBRE.test(datos.apellido)) {
+            return "El apellido debe tener entre 2 y 50 caracteres y solo letras.";
+        }
+
+        if (!datos.email) return "El email es obligatorio.";
+        if (!REGEX_EMAIL.test(datos.email)) return "El email no tiene un formato válido.";
+
+        // Teléfono es opcional: solo se valida si el usuario cargó algo.
+        if (datos.telefono && !REGEX_TELEFONO.test(datos.telefono)) {
+            return "El teléfono no tiene un formato válido.";
+        }
+
+        // Dirección es opcional: solo se valida si el usuario cargó algo.
+        if (datos.direccion && (datos.direccion.length < 5 || datos.direccion.length > 150)) {
+            return "La dirección debe tener entre 5 y 150 caracteres.";
+        }
+
+        if (!datos["contraseña"]) return "La contraseña es obligatoria.";
+        if (datos["contraseña"].length < 8) {
+            return "La contraseña debe tener al menos 8 caracteres.";
+        }
+        if (!REGEX_PASSWORD_MAYUS.test(datos["contraseña"])) {
+            return "La contraseña debe tener al menos una letra mayúscula.";
+        }
+        if (!REGEX_PASSWORD_MINUS.test(datos["contraseña"])) {
+            return "La contraseña debe tener al menos una letra minúscula.";
+        }
+        if (!REGEX_PASSWORD_NUM.test(datos["contraseña"])) {
+            return "La contraseña debe tener al menos un número.";
+        }
+        if (!REGEX_PASSWORD_ESPECIAL.test(datos["contraseña"])) {
+            return "La contraseña debe tener al menos un carácter especial.";
+        }
+
+        return null;
+    }
+
     // Lógica específica de cuenta.html (no rompe si estos elementos no existen)
     function initPaginaCuenta() {
         const panelAuth = document.getElementById("panelAuth");
@@ -125,6 +188,13 @@
 
             const email = document.getElementById("loginEmail").value.trim();
             const contraseña = document.getElementById("loginPassword").value;
+
+            const errorValidacion = validarLogin(email, contraseña);
+            if (errorValidacion) {
+                mostrarError(errorValidacion);
+                return;
+            }
+
             const desbloquear = bloquearBoton(formLogin, "Ingresando...");
 
             fetch(API_BASE + "/login", {
@@ -164,6 +234,13 @@
                 direccion: document.getElementById("regDireccion").value.trim(),
                 "contraseña": document.getElementById("regPassword").value
             };
+
+            const errorValidacion = validarRegistro(body);
+            if (errorValidacion) {
+                mostrarError(errorValidacion);
+                return;
+            }
+
             const desbloquear = bloquearBoton(formRegistro, "Creando cuenta...");
 
             fetch(API_BASE + "/registro", {
