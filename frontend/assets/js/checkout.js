@@ -13,7 +13,7 @@
         const panelCheckout = document.getElementById("panelCheckout");
         const panelGracias = document.getElementById("panelGracias");
         const checkoutIntro = document.getElementById("checkoutIntro");
-        if (!panelCheckout) return; // no estamos en checkout.html
+        if (!panelCheckout) return; 
 
         const auth = window.RosarioAuth && window.RosarioAuth.getAuth();
         if (!auth || !auth.usuario || !auth.token) {

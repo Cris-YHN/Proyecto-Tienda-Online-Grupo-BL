@@ -7,7 +7,7 @@ const config = {
     password: process.env.DB_PASSWORD,
     server: process.env.DB_SERVER,
     database: process.env.DB_DATABASE,
-    port: 1433, // instancia por defecto del contenedor Docker, sin nombre de instancia
+    port: 1433,
 
     options: {
         encrypt: false,
@@ -16,8 +16,6 @@ const config = {
     }
 };
 
-// Permite pisar el puerto por variable de entorno, por si en algún
-// entorno el contenedor no publica el 1433 de siempre.
 if (process.env.DB_PORT) {
     config.port = Number(process.env.DB_PORT);
 }

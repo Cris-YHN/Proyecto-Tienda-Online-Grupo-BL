@@ -755,7 +755,7 @@ body {
     font-size: 1.15rem;
 }
 
-/* ══════════ TABS LOGIN/REGISTRO (cuenta.html) ══════════ */
+/* ══════════ TABS LOGIN/REGISTRO ══════════ */
 .cat-jumplinks a.active-tab {
     border-color: var(--accent);
     color: var(--accent);

@@ -1,8 +1,6 @@
 // Autenticación — Rosario Sport
 //
-// Guarda { usuario, token } en localStorage bajo la clave "rs_auth" al
-// hacer login/registro. Otras páginas (como el futuro checkout) van a leer
-// esto para saber quién es el usuario logueado.
+// Guarda { usuario, token } en localStorage bajo la clave "rs_auth" al hacer login/registro.
 
 (function () {
     const AUTH_KEY = "rs_auth";
@@ -24,14 +22,11 @@
         localStorage.removeItem(AUTH_KEY);
     }
 
-    // Se expone para que otros scripts (cart.js en el checkout, más adelante)
-    // puedan leer el usuario logueado y armar el header Authorization.
     window.RosarioAuth = {
         getAuth: getAuth,
         clearAuth: clearAuth
     };
 
-    // ── Estado de la navbar (corre en TODAS las páginas) ──
     function actualizarNavbar() {
         const btn = document.getElementById("btn-account");
         if (!btn) return;
@@ -48,11 +43,11 @@
         }
     }
 
-    // ── Lógica específica de cuenta.html (no rompe si estos elementos no existen) ──
+    // Lógica específica de cuenta.html (no rompe si estos elementos no existen)
     function initPaginaCuenta() {
         const panelAuth = document.getElementById("panelAuth");
         const panelLogueado = document.getElementById("panelLogueado");
-        if (!panelAuth || !panelLogueado) return; // no estamos en cuenta.html
+        if (!panelAuth || !panelLogueado) return;
 
         const auth = getAuth();
 

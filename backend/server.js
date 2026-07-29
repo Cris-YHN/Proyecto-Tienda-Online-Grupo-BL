@@ -19,7 +19,6 @@ app.use(express.json());
 // Con esto, http://localhost:3000 ya muestra la página directamente.
 app.use(express.static(path.join(__dirname, "../frontend")));
 
-// Ruta de prueba de la API (antes vivía en "/", pero ahí ahora se sirve el frontend)
 app.get("/api/ping", (req, res) => {
     res.send("Servidor funcionando correctamente");
 });

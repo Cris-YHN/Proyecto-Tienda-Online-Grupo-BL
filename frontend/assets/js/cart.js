@@ -1,6 +1,4 @@
 // Carrito de compras — Rosario Sport
-// Guarda los productos agregados en localStorage, así se mantienen
-// aunque el usuario navegue entre index.html, categorias.html y contacto.html.
 
 (function () {
     const CART_KEY = "rs_cart";
@@ -81,7 +79,7 @@
         const list = document.getElementById("cartItemsList");
         const emptyMsg = document.getElementById("cartEmptyMsg");
         const totalEl = document.getElementById("cartTotal");
-        if (!list) return; // esta página no tiene el modal de carrito
+        if (!list) return;
 
         const cart = getCart();
         list.innerHTML = "";
@@ -133,7 +131,6 @@
 
         addToCart(id_producto, nameTag.textContent.trim(), priceTag.textContent.trim());
 
-        // pequeño feedback visual en el botón
         btn.classList.add("added");
         setTimeout(function () { btn.classList.remove("added"); }, 400);
     });
@@ -141,7 +138,7 @@
     // Botón "Finalizar compra": si no hay sesión iniciada, se avisa al
     // usuario en vez de dejarlo continuar. Si ya está logueado, lo mandamos
     // a checkout.html (ahí se pide nombre/tarjeta/etc. y se confirma el
-    // pedido). Depende de window.RosarioAuth, que expone auth.js.
+    // pedido).
     document.addEventListener("click", function (e) {
         const btn = e.target.closest("#btnFinalizarCompra");
         if (!btn) return;

@@ -1,11 +1,3 @@
-// Productos dinámicos — Rosario Sport
-//
-// Lee del backend real (/api/productos). La base devuelve "marca" y
-// "categoria" (nombre de la categoría en la tabla Categorias), que no son
-// exactamente los campos que usan las funciones de render de acá abajo
-// (pensadas en un principio para 6 secciones: Nike/Adidas/Puma/Natación/
-// Tenis/Fútbol). La función normalizarProducto() hace ese "traductor".
-
 (function () {
     const DATA_URL = "/api/productos";
 
@@ -32,8 +24,6 @@
     // precio, stock, imagen, id_categoria, categoria) al formato que usan
     // las cards y el modal.
     function normalizarProducto(p) {
-        // La marca manda si existe (Nike/Adidas/Puma); si no, se agrupa por
-        // el deporte (categoria) tal cual viene de la tabla Categorias.
         const grupo = p.marca ? slug(p.marca) : slug(p.categoria);
 
         return {
@@ -47,8 +37,6 @@
             categoria_label: p.marca || p.categoria,
             badge: p.stock <= 0 ? "SIN STOCK" : null,
             destacado: NOMBRES_DESTACADOS.includes(p.nombre),
-            // La base no tiene specs propias; armamos 2-3 líneas genéricas
-            // con lo que sí tenemos disponible.
             specs: [
                 "Categoría: " + p.categoria,
                 p.marca ? "Marca: " + p.marca : null,
@@ -110,7 +98,7 @@
         });
     }
 
-    // ── Modal de detalle, compartido por todos los productos ──
+    // Modal de detalle
     function openModal(id) {
         const p = productosCache.find(function (x) { return x.id_producto === id; });
         if (!p) return;
@@ -126,7 +114,6 @@
             .map(function (s) { return '<li><i class="fa-solid fa-check"></i>' + s + "</li>"; })
             .join("");
 
-        // el botón "Agregar al carrito" del modal necesita saber qué producto mostrar
         const modalEl = document.getElementById("productModal");
         modalEl.dataset.currentId = p.id_producto;
         modalEl.dataset.currentName = p.nombre;
@@ -143,8 +130,6 @@
             return;
         }
 
-        // botón "Agregar al carrito" dentro del modal (no tiene .prod-card cerca,
-        // así que cart.js no lo detecta solo; lo resolvemos acá)
         const modalAddBtn = e.target.closest("#productModalAddBtn");
         if (modalAddBtn) {
             const modalEl = document.getElementById("productModal");

@@ -8,8 +8,6 @@ async function crearPedido(req, res) {
             return res.status(400).json({ mensaje: "El pedido no tiene productos." });
         }
 
-        // req.usuario lo pone verificarToken, no confiamos en nada que
-        // mande el body para identificar quién hace el pedido.
         const id_usuario = req.usuario.id_usuario;
 
         const resultado = await pedidoModel.crearPedido(id_usuario, items);
