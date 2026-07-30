@@ -1,5 +1,12 @@
 # Documentación del Proyecto — Rosario Sport
 
+Integrantes:
+
+Isaac Alvarez
+Cristian Yahn
+Audin Correa
+
+
 ## Descripción general
 
 **Rosario Sport** es una tienda deportiva desarrollada como proyecto final de la materia. A diferencia de la versión inicial (sitio estático), el proyecto evolucionó a una aplicación **full-stack**: frontend en HTML/CSS/JS vanilla, backend en Node.js/Express, y base de datos en SQL Server, con catálogo dinámico, carrito, autenticación de usuarios y checkout funcional.
