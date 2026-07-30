@@ -2,9 +2,9 @@
 
 Integrantes:
 
-Isaac Alvarez
-Cristian Yahn
-Audin Correa
+Isaac Alvarez,
+Cristian Yahn,
+Audin Correa.
 
 
 ## Descripción general
